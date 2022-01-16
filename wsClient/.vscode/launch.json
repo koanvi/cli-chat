@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "new run",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register/transpile-only"
+      ],
+      "args": [
+        "${workspaceFolder}/src/index.ts",
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "run client",
+      "cwd": "${workspaceFolder}/",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register/transpile-only"
+      ],
+      "env": {
+        "NODE_PATH": "${workspaceFolder}/src",
+        // "config": "${workspaceFolder}/config/local.js",
+      },
+      "args": [
+        "${workspaceFolder}/src/index.ts",
+      ]
+    }
+  ]
+}
